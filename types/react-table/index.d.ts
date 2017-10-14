@@ -85,12 +85,16 @@ export interface TableProps extends
 
     /** Default: [] */
     defaultSorting: SortingRule[];
+    /** Breaking API change in 6.0: defaultSorting renamed to defaultSorted */
+    defaultSorted: SortingRule[];
 
     /** Default: false */
     showFilters: boolean;
 
     /** Default: [] */
     defaultFiltering: any[];
+    /** Breaking API change in 6.0: defaultFiltering renamed to defaultFiltered */
+    defaultFiltered: any[];
 
     /** Default: ... */
     defaultFilterMethod: FilterFunction;
@@ -103,9 +107,13 @@ export interface TableProps extends
 
     /** Default: [] */
     defaultResizing: any[];
+    /** Breaking API change in 6.0: defaultResizing renamed to defaultResized */
+    defaultResized: any[];
 
     /** On change. */
     onChange: ReactTableFunction;
+    /** Breaking API change in 6.0: onChange renamed to onFetchData */
+    onFetchData: ReactTableFunction;
 
     /**
      * Default: string
@@ -139,6 +147,8 @@ export interface ControlledStateOverrideProps {
 
     /** Default: undefined */
     sorting: number;
+    /** Breaking API change in 6.0: sorting renamed to sorted */
+    sorted: number;
 
     /** Sub component */
     SubComponent: SubComponentFunction;
@@ -166,6 +176,8 @@ export interface PivotingProps {
      * @example { 5: { 9: true }, 10: true }
      */
     expandedRows: ExpandedRows;
+    /** Breaking API change in 6.0: expandedRows renamed to expanded */
+    expanded: ExpandedRows;
 
     /** Default: ??? - Pivoting State Callbacks */
     onExpandRow: ReactTableFunction;
